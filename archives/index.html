@@ -1,0 +1,14 @@
+---
+layout: page
+title: Archives
+---
+
+{% assign postsByMonthYear = site.posts | group_by_exp: "post", "post.date | date: '%b %Y'" %}
+{% for monthYear in postsByMonthYear %}
+	<h2 class="grey">{{ monthYear.name }}</h2>
+	<ul class="archive">
+	  {% for post in monthYear.items %}
+	    <li><span class="grey">{{ post.date | date: "%d" }}</span> <a href="{{ site.url }}/{{ post.url }}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
+{% endfor %}

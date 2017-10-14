@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+<p class="center grey"><small>by <a href="{{ site.author_url }}" target="_blank">{{ site.author }}</a></small></p>
+
+{{ content }}
+
+<hr>
+
+<p class="center grey">posted on {{ page.date | date_to_string }}</p>
+<ul class="navigation center grey">
+	{% if page.previous.url %}
+		<li><a href="{{ site.url }}/{{ page.previous.url }}" title="{{ page.previous.title }}">previous post</a></li>
+	{% endif %}
+	{% if page.next.url %}
+		<li><a href="{{ site.url }}/{{ page.next.url }}" title="{{ page.next.title }}">next post</a></li>
+	{% endif %}
+</ul>
+<p class="center"><a href="{{ site.email_subscribe }}" target="_blank">Sign-up to receive all blog posts by email :)</a></p>

@@ -1,0 +1,193 @@
+/*
+title: Main Stylesheet;
+author: Paul Mostowyj;
+scope: global styles for all content;
+*/
+
+
+/* ------- global styles ------- */
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+	margin: 0;
+}
+
+html, body {
+	position: relative;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1 {
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 1em 0 0.5em 0;
+}
+
+p, ul, ol {
+	padding-bottom: 1em;
+}
+
+li ~ ul, li ~ ol {
+	padding-bottom: 0;
+}
+
+code {
+	font-family: 'Roboto Mono', monospace;
+}
+
+small {
+	font-size: 0.7em;
+}
+
+a {
+	color: inherit;
+
+	text-decoration: none;
+	border-bottom: solid 1px rgb(55, 55, 55);
+}
+
+a:hover {
+	color: rgb(55, 55, 55);
+}
+
+blockquote, table, form {
+	margin: 1em;
+}
+
+blockquote {
+	padding: 1em;
+
+	font-style: italic;
+
+	border-left: solid 1px rgb(105, 105, 105);
+}
+
+table {
+	margin: 0 auto 1em auto;
+}
+
+table, tr, th, td {
+	text-align: center;
+	border: solid 1px rgb(105, 105, 105);
+	border-collapse: collapse;
+}
+
+tr, th, td {
+	padding: 0.5em;
+}
+
+th {
+	background-color: rgb(15, 15, 15);
+}
+
+form, fieldset {
+	padding: 1em;
+
+	border: solid 1px rgb(105, 105, 105);
+}
+
+fieldset, textarea {
+	margin-bottom: 1em;
+}
+
+legend {
+	font-weight: bold;
+}
+
+textarea, [type="text"], select {
+	background-color: inherit;
+	color: inherit;
+
+	border: solid 1px rgb(105, 105, 105);
+}
+
+[type=submit], [type=reset], [type=button] {
+	padding: 0.5em;
+	background-color: rgb(15, 15, 15);
+	color: inherit;
+	border: solid 1px rgb(105, 105, 105);
+}
+
+[type=submit]:hover, [type=reset]:hover, [type=button]:hover {
+	background-color: rgb(105, 105, 105);
+}
+
+
+
+hr {
+	margin: 1em 0;
+	height: 1px;
+	background-color: #2A2A2A;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+	background: -o-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+	background: -moz-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+	background: -webkit-linear-gradient(right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+	border: none;
+}
+
+/* ------- global classes ------- */
+.center {
+	text-align: center;
+}
+
+.grey {
+	color: rgb(55, 55, 55);
+}
+
+.grey a:hover {
+	color: rgb(255, 255, 255);
+	border-bottom-color: rgb(255, 255, 255);
+}
+
+.archive {
+	list-style: none;
+}
+
+/* ------- navigation styles ------- */
+
+/* we remove the standard bullet points, which we'll replace a little further down */
+.navigation {
+	margin: 0;
+	padding: 0 0 1em 0;
+	list-style: none;
+}
+
+/* and display the list horizontally */
+.navigation li {
+	display: inline-block;
+}
+
+/* we add the pipe before the list item to use as a separator */
+.navigation li:before {
+	content: "|";
+	padding: 0 10px;
+}
+
+/* we just don't need it for the first item in the list */
+.navigation li:first-child:before {
+	content: "";
+	padding: 0;
+}
+
+/* ------- media queries ------- */
+@media screen and (min-width: 560px) {
+	body {
+		font-size: 18px;
+	}
+}

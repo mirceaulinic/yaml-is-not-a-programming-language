@@ -1,0 +1,13 @@
+# site details
+title: jNegative
+tag_line: a jekyll theme
+description: a white on black single column Jekyll theme with blog
+keywords: white on black simple jekyll theme
+url: https://paulmostowyj.github.io/jnegative
+author: Paul Mostowyj
+author_url: http://paulmostowyj.github.io
+email_subscribe: http://eepurl.com/cNZfVz
+
+# tech
+markdown: kramdown
+

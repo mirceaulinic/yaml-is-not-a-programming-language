@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- tech -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" title="{{ site.title }} Blog Feed" />
+
+		<!-- page -->
+		<title>{{ site.title }} | {{ site.tag_line }}</title>
+		<meta name="author" content="{{ site.author }}">
+		<meta name="description" content="{{ site.description }}">
+		<meta name="keywords" content="{{ site.keywords }}">
+
+		<!-- fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+
+		<!-- styles -->
+		<link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/default.css">
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="header" class="grey">
+				<p><strong><a href="{{ site.url }}">{{ site.title }}</a></strong> | {{ site.tag_line }}</p>
+			</div>
+
+			<div id="content">
+				{{ content }}
+			</div>
+
+			<div id="footer" class="grey">
+				<ul class="navigation">
+					<li><a href="{{ site.url }}/about">about</a></li>
+					<li><a href="{{ site.url }}/archives">archives</a></li>
+					<li><a href="{{ site.url }}/contact">contact</a></li>
+				</ul>
+				<p><small>jNegative was designed and coded by <a href="https://paulmostowyj.github.io">Paul Mostowyj</a></small></p>
+			</div>
+		</div>
+	</body>
+</html>

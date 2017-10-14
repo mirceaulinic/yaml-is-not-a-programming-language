@@ -1,0 +1,42 @@
+/*
+title: Main Stylesheet;
+author: Paul Mostowyj;
+scope: styles exclusive to the default template;
+*/
+
+/* ####### layout ####### */
+
+/* with the min-height set to 100% it means the footer set to absolute will sit at the bottom of the screen */
+/* but if the content in the body is bigger than the 100% the container grows with it */
+#container {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 1em;
+	min-height: 100%;
+	width: 100%;
+	max-width: 560px;
+}
+
+#header {
+	padding: 10px 0 10px 0;
+
+	text-align: center;
+}
+
+/* with that in mind we set the padding-bottom big enough to cover the footer (60px) */
+/* plus additional padding to cover the buttons that are set to an absolute position and are not recognised automatically */
+#content {
+	padding-bottom: 6em;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 10px 0;
+	/* the height has to be defined for the positioning solution to work */
+	height: 5em;
+	width: 100%;
+
+	text-align: center;
+}
