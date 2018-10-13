@@ -11,3 +11,5 @@ email_subscribe: http://eepurl.com/cNZfVz
 # tech
 markdown: kramdown
 
+
+theme: jekyll-theme-hacker
