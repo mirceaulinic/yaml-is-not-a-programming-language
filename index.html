@@ -2,19 +2,12 @@
 layout: default
 ---
 
-{% for post in site.posts %}
-	{% if post.next.url == null %}
-		<h1>{{ post.title }}</h1>
-		<p class="center grey"><small>by <a href="{{ site.author_url }}" target="_blank">{{ site.author }}</a></small></p>
+<marquee>This text will scroll from right to left</marquee>
 
-		{{ post.content }}
+<marquee direction="up">This text will scroll from bottom to top</marquee>
 
-		<hr>
-
-		<p class="center grey">posted on {{ post.date | date_to_string }}</p>
-		<ul class="navigation center grey">
-			<li><a href="{{ site.url }}/{{ post.previous.url }}" title="{{ post.previous.title }}">previous</a></li>
-		</ul>
-		<p class="center" target="_blank"><a href="{{ site.email_subscribe }}">Sign-up to receive all blog posts by email :)</a></p>
-	{% endif %}
-{% endfor %}
+<marquee direction="down" width="250" height="200" behavior="alternate" style="border:solid">
+  <marquee behavior="alternate">
+    This text will bounce
+  </marquee>
+</marquee>
